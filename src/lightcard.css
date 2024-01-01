@@ -1,0 +1,28 @@
+
+
+.lightcard
+{
+  font-size: 12px;
+  border-style: inset;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.colorsquare
+{
+  width:8px;
+  height:8px;
+  border-style: inset;
+  border-color: white;
+  border-width: 1px;
+  background-color: black;
+  color:black;
+}
+
+.position_input
+{
+  width:40px;
+  background-color: grey;
+}
