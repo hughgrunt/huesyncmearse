@@ -9,9 +9,9 @@
             "makers": [
               {
                 "name": "@electron-forge/maker-zip",
-                "platforms": ["darwin", "linux"], // optional
-                "config": {
-                    // Config here
+                "platforms": ["darwin", "linux"],
+                "config":
+                {
                 }
               }
             ]
