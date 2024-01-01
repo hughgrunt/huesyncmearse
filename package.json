@@ -4,10 +4,7 @@
   "version": "1.0.0",
   "description": "hue can sync me ass",
   "main": "src/index.js",
-        // If your config is only in package.json:
-      // Only showing the relevant configuration for brevity
-      {
-        "config": {
+   "config": {
           "forge": {
             "makers": [
               {
@@ -19,8 +16,7 @@
               }
             ]
           }
-        }
-      },
+        },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
