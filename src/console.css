@@ -1,0 +1,16 @@
+#console
+{
+  margin-top: -20px;
+  margin-bottom: 5px;
+  border-radius: 15px;
+  transition: 2s;
+  font-size: 14px;
+  height: 20px;
+  font-size: 10px;
+  overflow:auto;
+  background-color: #212121;
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Align horizontal */
+  align-items: center;
+}
