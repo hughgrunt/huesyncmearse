@@ -16,8 +16,16 @@ const BOOT =
     }
     else
     {
-      c.success = true;
-      c.content = JSON.parse(txt);
+      try
+      {
+        c.content = JSON.parse(txt);
+        c.success = true;
+      }
+      catch(e)
+      {
+        c.reason = e.message;
+        c.success = false;
+      }
     }
     return c;
   },
