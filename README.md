@@ -10,6 +10,3 @@ https://www.electronforge.io/
 4) Build App
     npm run make
 5) Find it in the out-folder of the electron app, then do whatever the arse you like with it
-
-ATM there is a bug which means before step 4 you need to put the login data into the config.json manually:
-{"ip":"xxx.xxx.x.xx","key":"xxxxxxx"}
