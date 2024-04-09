@@ -5,6 +5,11 @@ const fs = require('node:fs');
 const { readFile } = require('node:fs/promises');
 const { resolve } = require('node:path');
 
+var base_path = app.getAppPath("appData");
+if (base_path.indexOf("resources/app.asar") > -1)
+{
+  base_path = base_path.replace("resources/app.asar", "");
+}
 
 app.commandLine.appendSwitch("disable-renderer-backgrounding");
 
@@ -134,11 +139,20 @@ async function handleRequestScreenCaptureSourceID()
 async function handleWriteFile(event, filename, data)
 {
   let success = false;
-  await fs.writeFile(path.join(__dirname, filename), data, function (err)
+  fs.writeFile(path.join(base_path, filename), data, function (err)
   {
-  if (err) throw err;
+  if (err) {return success};
   }
   );
+
+  /*
+   * await fs.writeFile(path.join(__dirname, filename), data, function (err)
+   { *
+   if (err) {return success};
+}
+);
+   *
+   * */
   success = true;
   return success;
 }
@@ -147,7 +161,7 @@ async function handleReadFile(event, filename)
 {
   try
   {
-    let filepath = resolve(path.join(__dirname, filename));
+    let filepath = resolve(path.join(base_path, filename));
     let filecontent = await readFile(filepath, {encoding: 'utf8'});
     return filecontent;
   }
