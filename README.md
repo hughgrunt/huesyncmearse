@@ -9,7 +9,9 @@ https://www.electronforge.io/
     cd HueSyncMeArseDev
    
     git clone https://github.com/hughgrunt/huesyncmearse.git
-4) Copy files to the app, the githubfiles need to go in the the app files
-5) Build App
+4) Copy the cloned files into the root folder HueSyncMeArseDev and overwrite everything
+5) Now you can use it by terminal with npm start, if you wanna build a distributable, continue:
+6) Go into forge.config, remove in makers the "makers-deb"
+7) Build App
     npm run make
-6) Find it in the out-folder of the electron app, then do whatever the arse you like with it
+8) Find it in the out-folder of the electron app, then do whatever the arse you like with it
